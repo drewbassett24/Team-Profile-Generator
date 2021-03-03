@@ -65,8 +65,66 @@ function options() {
                 default:
                     buildTeam();
             }
-        })
+        });
     }
 
+    function addEngineer() {
+        inquirer.prompt([
+            {
+                type: "input",
+                name: "engineerName",
+                message: "What is the engineer's name?",
+
+            },
+            {
+                type: "input",
+                name: "engineerId",
+                message: "What is your engineer's Id?",
+            },
+            {
+                type: "input",
+                name: "engineersGitHub",
+                message: "What is the engineer's Github username?",
+            }
+        ]).then(answers => {
+            const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
+            teamMembers.push(engineer);
+            idArtray.push(answers.engineerId);
+            createTeam();
+        });
+    }
+
+    function addIntern() {
+        inquirer.prompt([
+            {
+                type: "input",
+                name: "internName",
+                message: "What is the intern's name?",
+
+            },
+            {
+                type: "input",
+                name: "internId",
+                message: "What is your intern's Id?",
+            },
+            {
+                type: "input",
+                name: "internEmail",
+                message: "What is the intern's email?",
+            }
+            {
+                type: "input",
+                name: "internschool",
+                message: "What is the intern's school?",
+            }
+        ]).then(answers => {
+            const intern = new Engineer(answers.internName, answers.internId, answers.internEmail, answers.internGithub);
+            teamMembers.push(intern);
+            idArtray.push(answers.internId);
+            createTeam();
+        });
+    }
         
+function buildTeam() {}
+
 }
