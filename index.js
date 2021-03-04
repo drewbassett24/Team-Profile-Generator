@@ -1,9 +1,12 @@
-const Manager = require("./lib/Manager");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
+//dependencies
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
+//classes
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
+
 
 const OUTPUT_DIR = path.resolve(_dirname, "output")
 const outputpath = path.join(OUTPUT_DIR, "team.html");
@@ -125,6 +128,15 @@ function options() {
         });
     }
         
-function buildTeam() {}
+function buildTeam() {
+    if (fs.existsSync(WHAT GOES HERE???)) {
+        fs.mkdirSync(WHAT GOES HERE???)
+    }
+    fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
+}
+
+createManager();
 
 }
+
+appMenu();
