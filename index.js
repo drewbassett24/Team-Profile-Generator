@@ -11,10 +11,10 @@ const Intern = require("./lib/Intern");
 const OUTPUT_DIR = path.resolve(_dirname, "output")
 const outputpath = path.join(OUTPUT_DIR, "team.html");
 
-const render = require("./src/page-template.js");
+const makePage = require("./src/page-template.js");
 
-const teamMember = [];
-const idArtray = [];
+const teamMembers = [];
+const idArray = [];
 
 function options() {
 
@@ -40,7 +40,7 @@ function options() {
                 const manager = new Manager(answers.managerName, answers.Id, answers.Email, answers.officeNumber);
                 teamMembers.push(manager);
                 console.log(teamMembers);
-                idArtray.push(answers.managerId);
+                idArray.push(answers.managerId);
                 createTeam();
             });
     }
@@ -92,7 +92,7 @@ function options() {
         ]).then(answers => {
             const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
             teamMembers.push(engineer);
-            idArtray.push(answers.engineerId);
+            idArray.push(answers.engineerId);
             createTeam();
         });
     }
@@ -121,18 +121,19 @@ function options() {
                 message: "What is the intern's school?",
             }
         ]).then(answers => {
-            const intern = new Engineer(answers.internName, answers.internId, answers.internEmail, answers.internGithub);
+            const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internGithub);
             teamMembers.push(intern);
-            idArtray.push(answers.internId);
+            idArray.push(answers.internId);
             createTeam();
         });
     }
-        
+// Get the data together into a Team object and passes it to a method that builds an html file from it.
+
 function buildTeam() {
-    if (fs.existsSync(WHAT GOES HERE???)) {
-        fs.mkdirSync(WHAT GOES HERE???)
+    if (fs.existsSync(???)) {
+        fs.mkdirSync(???)
     }
-    fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
+    fs.writeFileSync(makePage(teamMembers), "utf-8");
 }
 
 createManager();
