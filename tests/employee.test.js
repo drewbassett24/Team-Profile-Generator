@@ -19,7 +19,7 @@ test("Can set id via constructor", () => {
 
 test("Can set email via constructor", () => {
     const testValue = "test@test.com";
-    const e + new Employee("Foo", 1, testValue);
+    const e = new Employee("Foo", 1, testValue);
     expect(e,email).toBe(testValue);
 });
 
@@ -29,16 +29,3 @@ test("Can get name via getName()", () => {
     expect(e.getName()).toBe(testValue);
 });
 
-test("Can get id via getId()", () => {
-    
-    
-});
-
-test("Can get email via getEmail()", () => {
-    
-    
-});
-
-test("getRole() should return \"Employee\"", () => {
-    
-});
