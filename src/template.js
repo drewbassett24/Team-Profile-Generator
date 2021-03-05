@@ -59,21 +59,21 @@ const genTeam = team => {
             `;
     };
 
-    const page = [];
+    const html = [];
 
     html.push(team
         .filter(employee => employee.getRole() === "Manager")
-        .map(manager => generateManager(manager))
+        .map(manager => genManager(manager))
 
     );
     html.push(team
         .filter(employee => employee.getRole() === "Engineer")
-        .map(engineer => generateEngineer(engineer))
+        .map(engineer => genEngineer(engineer))
 
     );
     html.push(team
         .filter(employee => employee.getRole() === "Intern")
-        .map(intern => generateManager(intern))
+        .map(intern => genIntern(intern))
         .join("")
 
     );
@@ -112,7 +112,7 @@ return `
         <div class="container">
             <div class="row">
                 <div class="team-area col-12 d-flex justify-content-center">
-                    ${generateTeam(team)}
+                    ${genTeam(team)}
                     </div>
                 </div>
             </div>
@@ -126,7 +126,7 @@ return `
 
 
 
-}
+
 
     //Generate output page
 

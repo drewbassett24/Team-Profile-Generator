@@ -1,5 +1,5 @@
 {
-  "name": "Team-Profile-Generator",
+  "name": "team-profile-generator",
   "version": "1.0.0",
   "description": "An app to generate the profile of a team.",
   "main": "index.js",

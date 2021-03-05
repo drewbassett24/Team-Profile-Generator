@@ -9,8 +9,7 @@ const Intern = require("./lib/Intern");
 
 
 const OUTPUT_DIR = path.resolve(_dirname, "output")
-const outputpath = path.join(OUTPUT_DIR, "team.html");
-
+const outputPath = path.join(OUTPUT_DIR, "team.html");
 const makePage = require("./src/page-template.js");
 
 const teamMembers = [];
@@ -114,7 +113,7 @@ function options() {
                 type: "input",
                 name: "internEmail",
                 message: "What is the intern's email?",
-            }
+            },
             {
                 type: "input",
                 name: "internschool",
@@ -130,14 +129,15 @@ function options() {
 // Get the data together into a Team object and passes it to a method that builds an html file from it.
 
 function buildTeam() {
-    if (fs.existsSync(???)) {
-        fs.mkdirSync(???)
+    //Generate a directory for the end result
+    if (!fs.existsSync(OUTPUT_DIR)) {
+        fs.mkdirSync(OUTPUT_DIR)
     }
-    fs.writeFileSync(makePage(teamMembers), "utf-8");
+    fs.writeFileSync(outputPath, makePage(teamMembers), "utf-8");
 }
 
 createManager();
 
 }
 
-appMenu();
+options();
