@@ -2,8 +2,8 @@ const Intern = require("../lib/Intern");
 
 test("Can set school via constructor", () => {
     const school = "MySchool";
-    const s = new Intern(school);
-    expect(s.school).toBe(school);
+    const s = new Intern("Foo", 1, "test@test.com", testValue);
+    expect(s.school).toBe(testValue);
     
 });
 
