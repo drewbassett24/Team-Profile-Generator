@@ -16,8 +16,8 @@ const teamMembers = [];
 const idArray = [];
 
 function options() {
-//     createManager();
-// }
+    // createManager();
+}
 
 function createManager() {
     console.log("Please build a team");
@@ -147,14 +147,12 @@ function addIntern() {
 
 function buildTeam() {
     //Generate a directory for the end result
-    if (!fs.existsSync(OUTPUT_DIR)) {
-        fs.mkdirSync(OUTPUT_DIR)
-    }
+    
     fs.writeFileSync(outputPath, makePage(teamMembers), "utf-8");
 }
 
 createManager();
 
-}
+
 
 options();
