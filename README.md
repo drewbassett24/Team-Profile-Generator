@@ -34,8 +34,7 @@ None, so far.
 I tried to use JEst for testing the app but couldn't get it to work. For some reason, Node would not recognise or could not find the jest module. This is domehting to improve on in the future.
 
 ## License
-
-
+This app is licensed under an MIT license. See the License file for more details.
 
 ## Questions?
 
