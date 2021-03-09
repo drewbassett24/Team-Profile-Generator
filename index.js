@@ -140,12 +140,13 @@ function options() {
                 name: "internSchool",
                 message: "What is the intern's school?",
             }
+            
         ]).then(answers => {
             const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
             teamMembers.push(intern);
             console.log(teamMembers);
             idArray.push(answers.internId);
-            createTeam();
+            buildTeam();
         });
     }
     // Get the data together into a Team object and passes it to a method that builds an html file from it.
