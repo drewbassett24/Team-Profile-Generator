@@ -1,14 +1,14 @@
 const Employee = require("../lib/Employee");
 
 describe('Employee', () => {
-    it("Can instantiate Employee instance", () => {
+    it("Should instantiate Employee instance", () => {
         const e = new Employee();
         expect(typeof (e)).toBe("object");
     });
 });
 
 describe('Employee', () => {
-    it("Can set a name via constructor", () => {
+    it("Should set a name via constructor", () => {
         const name = "Aaron";
         const e = new Employee(name);
         expect(e.name).toBe(name);
@@ -16,7 +16,7 @@ describe('Employee', () => {
 });
 
 describe('Employee', () => {
-    it("Can set id via constructor", () => {
+    it("Should set id via constructor", () => {
         const testValue = 100;
         const e = new Employee("Foo", testValue);
         expect(e.id).toBe(testValue);
