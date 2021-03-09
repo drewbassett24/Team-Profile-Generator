@@ -28,10 +28,6 @@ Watch it in action ---> [here](https://user-images.githubusercontent.com/7347211
 
 ![Walkthrough](https://user-images.githubusercontent.com/73472116/110487374-6d9ffe00-80e5-11eb-93ee-4ff754c09ba8.jpg)
 
-
-
-
-
 ## Contributions
 
 None, so far.
